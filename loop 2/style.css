@@ -1,0 +1,63 @@
+body{
+    min-height:100vh;
+    background-image:url("../image/background.jpg");
+}
+.container{
+    margin-top:100px;
+}
+.card{
+    height:6vh;
+    width: 25vw;
+    background-color: rgb(246, 245, 244);
+    margin:auto;
+    position:relative;
+    border: 0.01em solid rgb(213, 213, 224);
+    
+}
+#wrapper{
+    background-color: rgb(62, 62, 241);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:auto;
+    font-weight:200;
+}
+img{
+    width: 50px;;
+}
+.card:not(#wrapper) > img:not(.check-icon){
+    margin-right:30px;
+}
+.mastercard-text{
+    font-weight:600;
+}
+.blue-text{
+    color:rgb(163, 163, 214);
+}
+.check-icon{
+    width:20px;
+    position:absolute;
+    right:12px;
+    top:50%;
+}
+#wrapper img{
+    width:25px;
+    margin-left:8px;
+}
+#plan{
+    height:8vh;
+    margin:auto;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+#plan::before{
+    content:"...";
+    line-height:1;
+    font-weight:1000;
+    position:relative;
+    top:-3px;
+
+}
+
