@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+         <div class="card"></div>
+        <div class="card1">
+            <div class="wrap">
+                <span class="dot"></span>
+                <span class="real">MARK ZUCKERBERG</span>
+            </div>
+            <span class="close">✕</span>
+        </div>
+     <div class="carding">
+        <div class="messages">
+         <div class="date"><legend>Today</legend></div>
+         <div id="demo"></div>
+        </div>
+     </div>
+
+    <div class="input-area">
+      <input type="text" placeholder="Enter your message" id="input">
+      <button type="button" class="send-btn" id="sendBtn" onclick="changeMessage()">SEND</button>
+    </div>
+    </div> 
+   <script>
+            const messages = [
+              {
+                text:"Hi, Mark! I made a new design for Messenger App.",
+                ClassName:"first-message",
+                time: "10:53",
+                side: "left"
+              },
+              {
+                text:" Yo! Send it to my assistant and we'll review it during the year.",
+                ClassName:"second-message",
+                time: "10:57",
+                side: "right"
+              },
+              {
+                text:"But Mark...",
+                ClassName:"third-message",
+                time:"11:03",
+                side: "left"
+              },
+              {
+                text:"You were blocked by the user.",
+                ClassName:"fourth-message"
+              }
+            ];
+            let text = `<span class="${messages[i].ClassName}">${messages[i].text}</span>`;
+
+      for (let i = 0; i < messages.length; i++) {
+        text += messages[i].text +"<br>"
+      }
+        console.log(messages)
+      document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
